@@ -12,12 +12,12 @@ app.use(cors())
 
 const { Server } = require("socket.io")
 const io = new Server(server, {
-    cors: {
-        origin: "https://effulgent-gumption-144c6a.netlify.app",
-        methods: ["GET", "POST"],
-        allowedHeaders: {"Access-Control-Allow-Origin":"*"},
-        credentials: true
-    }
+    // cors: {
+    //     origin: "https://effulgent-gumption-144c6a.netlify.app",
+    //     methods: ["GET", "POST"],
+    //     allowedHeaders: {"Access-Control-Allow-Origin":"*"},
+    //     credentials: true
+    // }
 })
 
 // const io = require("socket.io")(httpServer, {
