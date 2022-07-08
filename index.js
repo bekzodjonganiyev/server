@@ -13,9 +13,21 @@ app.use(cors())
 const { Server } = require("socket.io")
 const io = new Server(server, {
     cors: {
-        origin: "*"
+        origin: "https://example.com",
+        methods: ["GET", "POST"],
+        allowedHeaders: ["Access-Control-Allow-Origin"],
+        credentials: true
     }
 })
+
+// const io = require("socket.io")(httpServer, {
+//     cors: {
+//       origin: "https://example.com",
+//       methods: ["GET", "POST"],
+//       allowedHeaders: ["Access-Control-Allow-Origin"],
+//       credentials: true
+//     }
+//   });
 
 io.on("connection", (socket) => {
     console.log("User connected", socket.id)
