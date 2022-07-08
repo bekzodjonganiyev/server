@@ -13,9 +13,9 @@ app.use(cors())
 const { Server } = require("socket.io")
 const io = new Server(server, {
     cors: {
-        origin: "https://example.com",
+        origin: "https://effulgent-gumption-144c6a.netlify.app",
         methods: ["GET", "POST"],
-        allowedHeaders: ["Access-Control-Allow-Origin"],
+        allowedHeaders: {"Access-Control-Allow-Origin":"*"},
         credentials: true
     }
 })
