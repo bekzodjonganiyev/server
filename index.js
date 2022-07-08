@@ -13,7 +13,7 @@ app.use(cors())
 const { Server } = require("socket.io")
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:3000",
+        origin: "https://effulgent-gumption-144c6a.netlify.app",
         methods: ["GET", "POST"]
     }
 })
