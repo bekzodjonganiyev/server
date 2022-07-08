@@ -4,6 +4,9 @@ const app = express()
 const http = require("http")
 const server = http.createServer(app)
 
+const router = require('./router');
+app.use(router);
+
 const cors = require("cors")
 app.use(cors())
 
@@ -32,6 +35,6 @@ io.on("connection", (socket) => {
     })
 })
 
-server.listen(3001, () => {
-    console.log("Server is running")
-})
+// server.listen(3001, () => {
+//     console.log("Server is running")
+// })
