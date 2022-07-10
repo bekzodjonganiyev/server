@@ -12,6 +12,8 @@ app.get('/', (req, res) => {
   res.end()
 })
 
+const PORT = process.env.PORT || 5000;
+
 const { Server } = require("socket.io");
 const io = new Server(
   server,
@@ -40,6 +42,5 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(3001, () => {
-  console.log("SERVER RUNNING")
-})
+server.listen(PORT,
+  () => console.log(`Server has started on port ${PORT}`));
